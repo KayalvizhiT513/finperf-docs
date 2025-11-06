@@ -214,7 +214,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2 docs-heading">Rate Limit</h3>
-                <p className="text-docs-text">100 requests per minute per API key</p>
+                <p className="text-docs-text">100 requests per minute</p>
               </div>
             </div>
           </Section>
