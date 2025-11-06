@@ -5,8 +5,10 @@ import { ErrorTable } from "@/components/ApiDocs/ErrorTable";
 import { InfoBox } from "@/components/ApiDocs/InfoBox";
 import { Section } from "@/components/ApiDocs/Section";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
-const Index = () => {
+const StdDev = () => {
   const inputParameters = [
     {
       field: "portfolio_name",
@@ -55,9 +57,15 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="text-2xl font-bold text-primary">FinMetrics</div>
-            <Badge variant="secondary" className="text-xs">API v1</Badge>
+          <div className="flex items-center gap-6">
+            <Link to="/" className="text-docs-link hover:text-primary transition-colors flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              <span className="text-sm">Back to Overview</span>
+            </Link>
+            <div className="flex items-center gap-3">
+              <div className="text-2xl font-bold text-primary">FinMetrics</div>
+              <Badge variant="secondary" className="text-xs">API v1</Badge>
+            </div>
           </div>
         </div>
       </header>
@@ -231,4 +239,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default StdDev;
