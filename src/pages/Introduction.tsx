@@ -63,7 +63,7 @@ const Introduction = () => {
           </h1>
           <p className="text-xl text-docs-text max-w-3xl">
             This section provides documentation for all analytics APIs available in the platform. 
-            Each API computes a specific financial metric used for portfolio performance and risk evaluation. 
+            Each API computes a specific Investment Performance Analytics used for portfolio performance and risk evaluation. 
             Select a metric below to explore its input parameters, computation rules, and examples.
           </p>
         </div>
