@@ -107,7 +107,7 @@ const StdDev = () => {
                 <h3 className="text-xl font-semibold mb-3 docs-heading">portfolio_name</h3>
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must be alphanumeric (letters, numbers, underscores only)</li>
-                  <li>No spaces or special characters allowed</li>
+                  <li>No special characters allowed</li>
                   <li>Length between 3 and 50 characters</li>
                   <li>Must map to a valid, accessible portfolio record in the database</li>
                 </ul>
