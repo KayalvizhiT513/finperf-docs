@@ -30,15 +30,12 @@ const Index = () => {
 
   const errors = [
     { code: "400", message: "Invalid input data", description: "Missing or malformed parameters." },
-    { code: "401", message: "Unauthorized", description: "Invalid or missing API key." },
-    { code: "403", message: "Forbidden", description: "User not authorized to access this portfolio." },
     { code: "404", message: "Portfolio not found", description: "Portfolio name does not exist." },
     { code: "422", message: "Computation error", description: "Insufficient data points or invalid date range." },
     { code: "429", message: "Rate limit exceeded", description: "Too many requests." },
   ];
 
   const requestExample = `curl -X POST https://api.finmetrics.io/v1/analytics/standard-deviation \\
-  -H "Authorization: Bearer sk_test_123" \\
   -H "Content-Type: application/json" \\
   -d '{
     "portfolio_name": "GrowthFund_2025",
@@ -52,9 +49,6 @@ const Index = () => {
   "end_date": "2025-03-31",
   "standard_deviation": 0.0071
 }`;
-
-  const authExample = `Authorization: Bearer YOUR_API_KEY
-Content-Type: application/json`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -88,16 +82,6 @@ Content-Type: application/json`;
         </div>
 
         <div className="space-y-16">
-          {/* Authentication */}
-          <Section id="authentication" title="Authentication">
-            <p className="text-docs-text mb-6">
-              All requests require an API key. Include your API key in the Authorization header using the Bearer token format.
-            </p>
-            <CodeBlock code={authExample} language="http" />
-          </Section>
-
-          <Separator />
-
           {/* Input Parameters */}
           <Section id="parameters" title="Input parameters">
             <p className="text-docs-text mb-6">
