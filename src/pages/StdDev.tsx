@@ -118,7 +118,7 @@ const StdDev = () => {
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must follow ISO format (<code className="code-inline">YYYY-MM-DD</code>)</li>
                   <li>Must be the <strong>first day of a month</strong></li>
-                  <li>Cannot be the last day of a month</li>
+                  <li>Cannot be the any other day of a month</li>
                   <li>Must be earlier than <code className="code-inline">end_date</code></li>
                 </ul>
               </div>
@@ -128,7 +128,7 @@ const StdDev = () => {
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must follow ISO format (<code className="code-inline">YYYY-MM-DD</code>)</li>
                   <li>Must be the <strong>last day of a month</strong></li>
-                  <li>Cannot be the first day of a month</li>
+                  <li>Cannot be the any other day of a month</li>
                   <li>Must be later than <code className="code-inline">start_date</code></li>
                 </ul>
               </div>
