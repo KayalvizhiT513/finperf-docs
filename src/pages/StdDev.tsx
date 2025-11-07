@@ -107,7 +107,7 @@ const StdDev = () => {
                 <h3 className="text-xl font-semibold mb-3 docs-heading">portfolio_name</h3>
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must be alphanumeric (letters, numbers, single space, underscores only)</li>
-                  <li>No special characters allowed</li>
+                  <li>No special characters allowed except space</li>
                   <li>Length between 3 and 50 characters</li>
                   <li>Must map to a valid, accessible portfolio record in the database</li>
                 </ul>
@@ -118,7 +118,6 @@ const StdDev = () => {
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must follow ISO format (<code className="code-inline">YYYY-MM-DD</code>)</li>
                   <li>Must be the <strong>first day of a month</strong></li>
-                  <li>Cannot be the any other day of a month</li>
                   <li>Must be earlier than <code className="code-inline">end_date</code></li>
                 </ul>
               </div>
@@ -128,18 +127,9 @@ const StdDev = () => {
                 <ul className="list-disc list-inside space-y-2 text-docs-text ml-2">
                   <li>Must follow ISO format (<code className="code-inline">YYYY-MM-DD</code>)</li>
                   <li>Must be the <strong>last day of a month</strong></li>
-                  <li>Cannot be the any other day of a month</li>
                   <li>Must be later than <code className="code-inline">start_date</code></li>
                 </ul>
               </div>
-
-              <InfoBox type="warning" title="Cross-field rules">
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li><code className="code-inline">start_date</code> and <code className="code-inline">end_date</code> cannot be the same</li>
-                  <li>Date range cannot exceed 36 months</li>
-                  <li>The combination of portfolio and date range must yield at least one valid record</li>
-                </ul>
-              </InfoBox>
             </div>
           </Section>
 
