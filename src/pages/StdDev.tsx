@@ -37,7 +37,7 @@ const StdDev = () => {
     { code: "429", message: "Rate limit exceeded", description: "Too many requests." },
   ];
 
-  const requestExample = `curl -X POST https://api.finmetrics.io/v1/analytics/standard-deviation \\
+  const requestExample = `curl -X POST https://api.finmetrics.io/analytics/standard-deviation \\
   -H "Content-Type: application/json" \\
   -d '{
     "portfolio_name": "GrowthFund_2025",
@@ -84,7 +84,7 @@ const StdDev = () => {
           
           <div className="mt-6 flex items-center gap-3">
             <div className="bg-muted px-4 py-2 rounded-lg font-mono text-sm">
-              /v1/analytics/standard-deviation
+              /analytics/standard-deviation
             </div>
           </div>
         </div>
